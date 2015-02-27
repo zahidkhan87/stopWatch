@@ -1,14 +1,21 @@
-
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
 
 header {
-	width: 100%;
+	width: 500px;
 	height: 50px;
 	margin: auto;
+	padding-top: 0px; 
 	background-color: #ececec;
-	border: #f00 thin solid;
+	border-bottom: #ccc thin solid;
 	font-family: "Arial";
 	font-weight: bold;
 	text-align: center;
+}
+
+header div {
+	padding-top: 15px;
 }
 
 main {
@@ -17,42 +24,56 @@ main {
 	margin: auto;
 }
 
-
 #time-bar {
 	margin-top: 20px;
-	margin-bottom: 20px;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	border: #f00 thin solid;
+	margin-bottom: 20px;	
 }
 
 #time-bar .sec-small {			
 	text-align: right;
 	margin: 0;
+	font-weight: lighter;
 }
 
 #time-bar .sec-big {		
 	text-align: right;	
 	font-size: 50px;
 	margin: 0;
+	font-weight: lighter;
 }
 
 #controls {		
-	border: #f00 thin solid;
+	border-top: #ccc thin solid;
 	background-color: #ececec;
 	min-height: 300px;
 }
 
 #controls .btn-group {
-	width: 200px;
+	width: 225px;
 	margin: auto;
+	margin-top: 20px;
 }
 
 #controls .btn-group a {	
 	margin: 10px;
-	padding: 20px;
-	background-color: #fff;	
+	width: 75px;
+	height: 75px;
+	line-height: 70px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #fff;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	text-decoration: none;	
+}
+
+#controls .btn-group a:first-child {
+	color: green;
+	float: left;
 }
 
 #controls .btn-group a:last-child {
-	float: right;
+	color: #666;
+	float: right;	
 }
