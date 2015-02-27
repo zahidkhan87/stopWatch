@@ -1,9 +1,12 @@
+
 // StopWatch Example Pure JS
-function stopWatch() {			
+function stopWatch() {	
+	// set some vars
 	var timer = document.querySelector('.sec-big');
 	var timerSm = document.querySelector('.sec-small');
 	var t = [0, 0, 0, 0, 0, 0, 0, 0];		
 	
+	// toggle start and stop function
 	this.startStop = function() {				
 		t[t[2]] = (+new Date()).valueOf();
 		t[2] = 1 - t[2];
@@ -18,8 +21,7 @@ function stopWatch() {
 			
 			document.querySelector('#startTimer').innerHTML = "Start";
 			document.querySelector('#startTimer').style.color = "green";
-			document.querySelector('#reset').style.display = "block";
-			
+			document.querySelector('#reset').style.display = "block";			
 			display();
 		}
 		else {			
@@ -32,6 +34,7 @@ function stopWatch() {
 		return false;
 	};	
 	
+	// reset the timer
 	this.reset = function() {
 		if (t[2]) {
 			startStop();
@@ -46,6 +49,7 @@ function stopWatch() {
 		return false;
 	};
 	
+	// format the function
 	var format = function(ms) {		
 		var d = new Date(ms + t[5]).toString().replace(/.*(\d{2}:\d{2}).*/, '$1');
 		var x = String(ms % 1000);
@@ -56,6 +60,7 @@ function stopWatch() {
 		return d.substr(0, d.length - 1);
 	};		
 	
+	// handle timer display	
 	var display = function() {		
 		if (t[2]) {
 			t[1] = (new Date()).valueOf();
@@ -66,6 +71,8 @@ function stopWatch() {
 	};					
 }
 
+
+// Start the stopWatch class
 var start = new stopWatch();
 
 
